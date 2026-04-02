@@ -215,7 +215,7 @@ fun HomeScreen(){
 
             Column() {
                 Image(
-                    painter = painterResource(R.drawable.electronics),
+                    painter = painterResource(R.drawable.top1),
                     contentDescription = "electronics",
                     modifier = Modifier.size(200.dp).clip(shape = RoundedCornerShape(20.dp)),
                     contentScale = ContentScale.Crop
@@ -235,7 +235,7 @@ fun HomeScreen(){
 
             Column() {
                 Image(
-                    painter = painterResource(R.drawable.groceries),
+                    painter = painterResource(R.drawable.top2),
                     contentDescription = "electronics",
                     modifier = Modifier.size(200.dp).clip(shape = RoundedCornerShape(20.dp)),
                     contentScale = ContentScale.Crop
@@ -255,7 +255,7 @@ fun HomeScreen(){
 
             Column() {
                 Image(
-                    painter = painterResource(R.drawable.clothes),
+                    painter = painterResource(R.drawable.top3),
                     contentDescription = "electronics",
                     modifier = Modifier.size(200.dp).clip(shape = RoundedCornerShape(20.dp)),
                     contentScale = ContentScale.Crop
