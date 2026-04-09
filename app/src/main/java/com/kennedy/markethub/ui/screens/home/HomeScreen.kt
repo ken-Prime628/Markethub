@@ -19,6 +19,8 @@ import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.Share
 import androidx.compose.material.icons.filled.ShoppingCart
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -148,6 +150,16 @@ fun HomeScreen(){
                     fontWeight = FontWeight.ExtraBold,
                     modifier = Modifier.padding(start = 20.dp)
                 )
+
+                Button(
+                    onClick = {},
+                    colors = ButtonDefaults.buttonColors(Borange),
+                    shape = RoundedCornerShape(10.dp),
+
+                ) {
+                    Text(text = "Shop Now")
+                }
+
             }
 
             Spacer(modifier = Modifier.width(20.dp))
@@ -168,6 +180,16 @@ fun HomeScreen(){
                     fontWeight = FontWeight.ExtraBold,
                     modifier = Modifier.padding(start = 20.dp)
                 )
+
+                Button(
+                    onClick = {},
+                    colors = ButtonDefaults.buttonColors(Borange),
+                    shape = RoundedCornerShape(10.dp),
+
+                    ) {
+                    Text(text = "Shop Now")
+                }
+
             }
 
             Spacer(modifier = Modifier.width(20.dp))
@@ -188,6 +210,16 @@ fun HomeScreen(){
                     fontWeight = FontWeight.ExtraBold,
                     modifier = Modifier.padding(start = 20.dp)
                 )
+
+                Button(
+                    onClick = {},
+                    colors = ButtonDefaults.buttonColors(Borange),
+                    shape = RoundedCornerShape(10.dp),
+
+                    ) {
+                    Text(text = "Shop Now")
+                }
+
             }
 
 
