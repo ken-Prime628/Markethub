@@ -51,7 +51,7 @@ fun LoginScreen(navController: NavController){
     Column(
 
         modifier = Modifier
-            .paint(painter = painterResource(R.drawable.bg1), contentScale = ContentScale.FillBounds)
+            .paint(painter = painterResource(R.drawable.img), contentScale = ContentScale.FillBounds)
             .fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center

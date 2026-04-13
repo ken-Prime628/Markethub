@@ -38,7 +38,7 @@ fun OnboardingScreen(navController: NavController){
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .paint(painter = painterResource(R.drawable.bg1), contentScale = ContentScale.FillBounds),
+            .paint(painter = painterResource(R.drawable.img), contentScale = ContentScale.FillBounds),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
