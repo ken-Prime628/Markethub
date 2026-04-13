@@ -7,3 +7,5 @@ const val ROUTE_Home = "home"
 const val ROUTE_OnBoarding = "onboarding"
 const val ROUTE_Payments = "payments"
 const val ROUTE_Service = "service"
+
+const val ROUTE_Intent = "intent"

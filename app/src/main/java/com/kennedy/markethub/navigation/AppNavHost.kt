@@ -10,6 +10,7 @@ import com.kennedy.markethub.ui.screens.about.AboutScreen
 import com.kennedy.markethub.ui.screens.auth.LoginScreen
 import com.kennedy.markethub.ui.screens.auth.RegisterScreen
 import com.kennedy.markethub.ui.screens.home.HomeScreen
+import com.kennedy.markethub.ui.screens.intent.IntentScreen
 import com.kennedy.markethub.ui.screens.onboarding.OnboardingScreen
 import com.kennedy.markethub.ui.screens.payments.PaymentScreen
 import com.kennedy.markethub.ui.screens.service.ServiceScreen
@@ -49,6 +50,11 @@ fun AppNavHost(
         composable(ROUTE_Service) {
             ServiceScreen(navController)
         }
+
+        composable(ROUTE_Intent) {
+            IntentScreen(navController)
+        }
+
 
 
 

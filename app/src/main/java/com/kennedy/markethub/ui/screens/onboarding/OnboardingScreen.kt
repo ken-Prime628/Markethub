@@ -28,6 +28,7 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.kennedy.markethub.R
+import com.kennedy.markethub.navigation.ROUTE_Register
 import com.kennedy.markethub.ui.theme.Borange
 
 
@@ -92,6 +93,7 @@ fun OnboardingScreen(navController: NavController){
 
         Button(
             onClick = {
+                navController.navigate(ROUTE_Register)
 
                       },
             colors = ButtonDefaults.buttonColors(Borange),
