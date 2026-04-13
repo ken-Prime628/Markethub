@@ -1,4 +1,4 @@
-package com.kennedy.markethub.ui.screens.payments
+package com.daniel.markethub.ui.screens.service
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -9,15 +9,25 @@ import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 
 @Composable
-fun PaymentScreen(navController: NavController){
+fun ServiceScreen(navController: NavController){
 
     Column(
+
         modifier = Modifier.fillMaxSize()
+
+
+
     ) {
 
 
 
+
+
     }
+
+
+
+
 
 
 }
@@ -25,8 +35,9 @@ fun PaymentScreen(navController: NavController){
 
 @Preview(showBackground = true)
 @Composable
-fun PaymentScreenPreview(){
+fun ServiceScreenPreview(){
 
-    PaymentScreen(rememberNavController())
+    ServiceScreen(rememberNavController())
+
 
 }

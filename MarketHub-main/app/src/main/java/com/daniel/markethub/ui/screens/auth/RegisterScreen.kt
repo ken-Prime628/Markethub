@@ -1,6 +1,5 @@
-package com.kennedy.markethub.ui.screens.auth
+package com.daniel.markethub.ui.screens.auth
 
-import android.media.MediaRouter2
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -20,10 +19,10 @@ import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.OutlinedTextFieldDefaults
-import androidx.compose.material3.TextField
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
@@ -34,6 +33,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.paint
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
@@ -44,171 +44,174 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
+import com.daniel.markethub.R
+import com.daniel.markethub.navigation.ROUTE_Login
+import com.daniel.markethub.ui.theme.Maroon
 
-import com.kennedy.markethub.R
-import com.kennedy.markethub.navigation.ROUTE_Login
-import com.kennedy.markethub.ui.theme.Borange
 
 @Composable
 fun RegisterScreen(navController: NavController){
 
     Column(
+
         modifier = Modifier
-            .fillMaxSize()
-            .paint(painter = painterResource(R.drawable.bg1), contentScale = ContentScale.FillBounds),
+            .paint(painter = painterResource(R.drawable.background), contentScale = ContentScale.FillBounds)
+            .fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Center,
+        verticalArrangement = Arrangement.Center
+
+
 
     ) {
 
-        Spacer(modifier = Modifier.height(20.dp))
-
         Image(
-            painter = painterResource(R.drawable.re),
-            contentDescription = "product",
-            modifier = Modifier.size(300.dp)
+
+            painter = painterResource(R.drawable.img_1),
+            contentDescription = "Product",
+            modifier = Modifier.size(200.dp)
         )
 
+        Spacer(modifier = Modifier.height(20.dp))
+
+
+
+
         Text(
-            text = "Join Us and Start Your Journey Today",
-            fontSize = 20.sp,
-            fontWeight = FontWeight.Bold,
-            color = Borange
+            text = "Join Us And Start Your Journey Today",
+            fontSize = 20.sp, fontWeight = FontWeight.Medium,
+
+
         )
 
         Spacer(modifier = Modifier.height(20.dp))
 
         //Variables
+
         var username by remember { mutableStateOf("") }
         var email by remember { mutableStateOf("") }
         var password by remember { mutableStateOf("") }
         var confirmpassword by remember { mutableStateOf("") }
 
-
         OutlinedTextField(
-            value = username,
-            onValueChange = { username = it },
-            modifier = Modifier.padding(start = 20.dp, end = 20.dp).fillMaxWidth(),
-            leadingIcon = {Icon(imageVector = Icons.Default.Person, contentDescription = "")},
-            label = { Text(text = "Username") },
+            value = username ,
+            onValueChange = { username = it},
+            modifier = Modifier.width(350.dp),
+            leadingIcon = {  Icon(
+                imageVector = Icons.Default.Person,
+                contentDescription = "username")  },
+
+            label = {Text(text = "Enter Username")},
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Text),
             colors = OutlinedTextFieldDefaults.colors(
-                unfocusedBorderColor = Borange,
-                focusedBorderColor = Borange,
-                unfocusedLeadingIconColor = Borange,
+                unfocusedBorderColor = Color.Gray
+
 
             )
 
 
 
-        )
-
-        Spacer(modifier = Modifier.height(20.dp))
 
 
+            )
+
+        Spacer(modifier = Modifier.height(10.dp))
 
         OutlinedTextField(
-            value = email,
-            onValueChange = { email = it },
-            modifier = Modifier.padding(start = 20.dp, end = 20.dp).fillMaxWidth(),
-            leadingIcon = {Icon(imageVector = Icons.Default.Email, contentDescription = "")},
-            label = { Text(text = "Email") },
+            value = email ,
+            onValueChange = { email = it},
+            modifier = Modifier.width(350.dp),
+            leadingIcon = {  Icon(
+                imageVector = Icons.Default.Email,
+                contentDescription = "email")  },
+
+            label = {Text(text = "Enter Email")},
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Email),
             colors = OutlinedTextFieldDefaults.colors(
-                unfocusedBorderColor = Borange,
-                focusedBorderColor = Borange,
-                unfocusedLeadingIconColor = Borange,
+                    unfocusedBorderColor = Color.Gray
 
-                )
+
+            )
+
+
 
 
 
         )
 
-        Spacer(modifier = Modifier.height(20.dp))
-
+        Spacer(modifier = Modifier.height(10.dp))
 
 
 
         OutlinedTextField(
-            value = password,
-            onValueChange = { password = it },
-            modifier = Modifier.padding(start = 20.dp, end = 20.dp).fillMaxWidth(),
-            leadingIcon = {Icon(imageVector = Icons.Default.Lock, contentDescription = "")},
-            label = { Text(text = "Password") },
+            value = password ,
+            onValueChange = { password = it},
+            modifier = Modifier.width(350.dp),
+            leadingIcon = {  Icon(
+                imageVector = Icons.Default.Lock,
+                contentDescription = "password")  },
+
+            label = {Text(text = "Enter password")},
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
             colors = OutlinedTextFieldDefaults.colors(
-                unfocusedBorderColor = Borange,
-                focusedBorderColor = Borange,
-                unfocusedLeadingIconColor = Borange,
+                unfocusedBorderColor = Color.Gray
 
-                ),
+
+            ),
             visualTransformation = PasswordVisualTransformation()
+
+
 
 
 
         )
 
-        Spacer(modifier = Modifier.height(20.dp))
-
-
-
-
+        Spacer(modifier = Modifier.height(10.dp))
 
         OutlinedTextField(
-            value = confirmpassword,
-            onValueChange = { confirmpassword = it },
-            modifier = Modifier.padding(start = 20.dp, end = 20.dp).fillMaxWidth(),
-            leadingIcon = {Icon(imageVector = Icons.Default.Lock, contentDescription = "")},
-            label = { Text(text = "Confirmpassword") },
+            value = confirmpassword ,
+            onValueChange = { confirmpassword = it},
+            modifier = Modifier.width(350.dp),
+            leadingIcon = {  Icon(
+                imageVector = Icons.Default.Lock,
+                contentDescription = "Confirm Password")  },
+
+            label = {Text(text = "Confirm Password")},
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
             colors = OutlinedTextFieldDefaults.colors(
-                unfocusedBorderColor = Borange,
-                focusedBorderColor = Borange,
-                unfocusedLeadingIconColor = Borange,
+                unfocusedBorderColor = Color.Gray
 
-                ),
+
+            ),
             visualTransformation = PasswordVisualTransformation()
+
+
 
 
 
         )
 
-
-        Spacer(modifier = Modifier.height(20.dp))
-
+        Spacer(modifier = Modifier.height(10.dp))
 
         Button(
             onClick = {},
-            colors = ButtonDefaults.buttonColors(Borange),
+            colors = ButtonDefaults.buttonColors(Maroon),
             shape = RoundedCornerShape(10.dp),
             modifier = Modifier.width(350.dp)
+        ) {
+            Text(
+                text = "Sign Up"
+            )
 
-
-            ) {
-            Text(text = "Register Now")
         }
 
-        Spacer(modifier = Modifier.height(20.dp))
+        Spacer(modifier = Modifier.height(10.dp))
+
 
         TextButton(onClick = {
-        navController.navigate(ROUTE_Login)
+            navController.navigate(ROUTE_Login)
         }) {
-            Text(text = "Already Have An Account?Login")
+            Text(text = "Already Have an account? Login")
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -223,6 +226,18 @@ fun RegisterScreen(navController: NavController){
     }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 }
 
 
@@ -231,5 +246,6 @@ fun RegisterScreen(navController: NavController){
 fun RegisterScreenPreview(){
 
     RegisterScreen(rememberNavController())
+
 
 }

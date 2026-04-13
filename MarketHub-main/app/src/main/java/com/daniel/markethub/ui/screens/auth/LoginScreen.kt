@@ -1,4 +1,4 @@
-package com.kennedy.markethub.ui.screens.auth
+package com.daniel.markethub.ui.screens.auth
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
@@ -39,11 +39,10 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
-import com.kennedy.markethub.R
-import com.kennedy.markethub.navigation.ROUTE_Home
-import com.kennedy.markethub.navigation.ROUTE_Register
-
-import com.kennedy.markethub.ui.theme.Borange
+import com.daniel.markethub.R
+import com.daniel.markethub.navigation.ROUTE_Home
+import com.daniel.markethub.navigation.ROUTE_Register
+import com.daniel.markethub.ui.theme.Maroon
 
 @Composable
 fun LoginScreen(navController: NavController){
@@ -51,7 +50,7 @@ fun LoginScreen(navController: NavController){
     Column(
 
         modifier = Modifier
-            .paint(painter = painterResource(R.drawable.bg1), contentScale = ContentScale.FillBounds)
+            .paint(painter = painterResource(R.drawable.background), contentScale = ContentScale.FillBounds)
             .fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
@@ -65,7 +64,7 @@ fun LoginScreen(navController: NavController){
 
         Image(
 
-            painter = painterResource(R.drawable.re),
+            painter = painterResource(R.drawable.img_1),
             contentDescription = "Product",
             modifier = Modifier.size(200.dp)
         )
@@ -144,7 +143,7 @@ fun LoginScreen(navController: NavController){
 
         Button(
             onClick = {},
-            colors = ButtonDefaults.buttonColors(Borange),
+            colors = ButtonDefaults.buttonColors(Maroon),
             shape = RoundedCornerShape(10.dp),
             modifier = Modifier.width(350.dp)
         ) {
@@ -164,7 +163,7 @@ fun LoginScreen(navController: NavController){
         }
 
         TextButton(onClick = {
-        navController.navigate(ROUTE_Home)
+            navController.navigate(ROUTE_Home)
         }) {
             Text(text = "Go to Home")
         }

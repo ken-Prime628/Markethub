@@ -1,4 +1,4 @@
-package com.kennedy.markethub.ui.screens.about
+package com.daniel.markethub.ui.screens.about
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -19,28 +19,32 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
-import com.kennedy.markethub.ui.theme.Borange
+import com.daniel.markethub.ui.theme.Purple80
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun AboutScreen(navController: NavController){
 
     Column(
+
         modifier = Modifier.fillMaxSize()
+
+
+
     ) {
 
-
         TopAppBar(
-            title ={ Text(text = "about")},
+            title ={ Text(text = "About")},
             navigationIcon = {
                 IconButton(
-                    onClick = {}) {
+                    onClick = {}
+                ) {
                     Icon(
                         imageVector = Icons.Default.Menu,
-                        contentDescription = "Menu"
+                        contentDescription = "menu"
+
                     ) }
             },
-
             actions = {
                 IconButton(
                     onClick = {}
@@ -68,49 +72,22 @@ fun AboutScreen(navController: NavController){
                     ) }
 
             },
-
-
             colors = TopAppBarDefaults.topAppBarColors(
-                containerColor = Borange,
-                navigationIconContentColor = Color.White,
-                titleContentColor = Color.White,
-                actionIconContentColor = Color.White,
+                containerColor = Purple80,
+                navigationIconContentColor = Color.Black,
+                titleContentColor = Color.Black
             )
-
-
         )
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
+
+
+
+
 
 
 }
@@ -122,6 +99,5 @@ fun AboutScreenPreview(){
 
     AboutScreen(rememberNavController())
 
+
 }
-
-

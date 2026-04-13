@@ -15,7 +15,9 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.paint
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
@@ -23,14 +25,19 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
 import com.kennedy.markethub.R
 import com.kennedy.markethub.ui.theme.Borange
 
+
 @Composable
-fun OnboardingScreen(){
+fun OnboardingScreen(navController: NavController){
 
     Column(
-        modifier = Modifier.fillMaxSize(),
+        modifier = Modifier
+            .fillMaxSize()
+            .paint(painter = painterResource(R.drawable.bg1), contentScale = ContentScale.FillBounds),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
@@ -60,6 +67,7 @@ fun OnboardingScreen(){
             text = "Shop Smarter",
             fontSize = 20.sp,
             fontWeight = FontWeight.Bold
+
         )
 
         Spacer(modifier = Modifier.height(20.dp))
@@ -83,7 +91,9 @@ fun OnboardingScreen(){
 
 
         Button(
-            onClick = {},
+            onClick = {
+
+                      },
             colors = ButtonDefaults.buttonColors(Borange),
             shape = RoundedCornerShape(10.dp),
             modifier = Modifier.width(350.dp)
@@ -121,5 +131,5 @@ fun OnboardingScreen(){
 @Composable
 fun OnboardingScreenPreview(){
 
-    OnboardingScreen()
+    OnboardingScreen(rememberNavController())
 }
