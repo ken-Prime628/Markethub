@@ -9,3 +9,5 @@ const val ROUTE_Payments = "payments"
 const val ROUTE_Service = "service"
 
 const val ROUTE_Intent = "intent"
+const val ROUTE_Splash = "Splash"
+const val ROUTE_Scaffold = "Scaffold"

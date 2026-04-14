@@ -13,14 +13,16 @@ import com.kennedy.markethub.ui.screens.home.HomeScreen
 import com.kennedy.markethub.ui.screens.intent.IntentScreen
 import com.kennedy.markethub.ui.screens.onboarding.OnboardingScreen
 import com.kennedy.markethub.ui.screens.payments.PaymentScreen
+import com.kennedy.markethub.ui.screens.scaffold.ScaffoldScreen
 import com.kennedy.markethub.ui.screens.service.ServiceScreen
+import com.kennedy.markethub.ui.screens.splash.SplashScreen
 
 
 @Composable
 fun AppNavHost(
     modifier: Modifier = Modifier,
     navController: NavHostController = rememberNavController(),
-    startDestination: String = ROUTE_OnBoarding
+    startDestination: String = ROUTE_Splash
 ) {
 
     NavHost(
@@ -53,6 +55,14 @@ fun AppNavHost(
 
         composable(ROUTE_Intent) {
             IntentScreen(navController)
+        }
+
+        composable(ROUTE_Splash) {
+            SplashScreen(navController)
+        }
+
+        composable(ROUTE_Scaffold) {
+            ScaffoldScreen(navController)
         }
 
 
