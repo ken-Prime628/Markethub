@@ -34,6 +34,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
+import com.kennedy.markethub.navigation.ROUTE_Home
 import com.kennedy.markethub.ui.theme.Borange
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -42,7 +43,7 @@ fun ScaffoldScreen(navController: NavController){
 
     //Scaffold
 
-    var selectedIndex by remember { mutableStateOf(0) }
+    var selectedIndex by remember { mutableStateOf(1) }
 
     Scaffold(
 
@@ -50,7 +51,7 @@ fun ScaffoldScreen(navController: NavController){
         //TopBar
         topBar = {
             TopAppBar(
-                title = { Text("Contact Screen") },
+                title = { Text("Scaffold Screen") },
                 navigationIcon = {
                     IconButton(onClick = { /* Handle back/nav */ }) {
                         Icon(Icons.Default.ArrowBack, contentDescription = "Back")
@@ -60,7 +61,10 @@ fun ScaffoldScreen(navController: NavController){
                     containerColor = Borange,
                     titleContentColor = Color.White,
                     navigationIconContentColor = Color.White
-                )
+                ),
+                actions ={
+                    
+                }
             )
         },
 
@@ -70,11 +74,11 @@ fun ScaffoldScreen(navController: NavController){
                 containerColor = Borange
             ){
                 NavigationBarItem(
-                    icon = { Icon(Icons.Default.Home, contentDescription = "Home") },
-                    label = { Text("Home") },
+                    icon = { Icon(Icons.Default.Home, contentDescription = "Home", tint =Color.White) },
+                    label = { Text("Home", color = Color.White) },
                     selected = selectedIndex == 0,
                     onClick = { selectedIndex = 0
-                        //navController.navigate(ROUT_HOME)
+                        navController.navigate(ROUTE_Home)
                     }
                 )
                 NavigationBarItem(
@@ -124,9 +128,7 @@ fun ScaffoldScreen(navController: NavController){
 
 
                 //Main Contents of the page
-                Text(text = "Welcome to Homescreen Screen", fontSize = 20.sp)
-                Spacer(modifier = Modifier.height(8.dp))
-                Text("This is where the main content goes.")
+
 
 
 
