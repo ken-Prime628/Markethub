@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "727461409039",
+    "project_id": "markethub-15847",
+    "storage_bucket": "markethub-15847.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:727461409039:android:549a16f17ee85c34294e7a",
+        "android_client_info": {
+          "package_name": "com.kennedy.markethub"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDsVMTspxfnf7rKJN2IiJkyhsl1hc7mxXw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
