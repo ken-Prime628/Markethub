@@ -11,3 +11,8 @@ const val ROUTE_Service = "service"
 const val ROUTE_Intent = "intent"
 const val ROUTE_Splash = "Splash"
 const val ROUTE_Scaffold = "Scaffold"
+
+
+const val ROUTE_ADD_PRODUCT = "addproduct"
+const val ROUTE_VIEW_PRODUCTS = "viewproducts"
+const val ROUTE_UPDATE_PRODUCT = "update_product/{productId}"
