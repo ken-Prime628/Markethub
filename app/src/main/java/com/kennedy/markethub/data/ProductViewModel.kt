@@ -24,8 +24,8 @@ import java.io.InputStream
 
 class ProductViewModel : ViewModel() {
 
-    private val cloudinaryUrl = "https://api.cloudinary.com/v1_1/ds8y1vfji/image/upload"
-    private val uploadPreset = "megamart"
+    private val cloudinaryUrl = "https://api.cloudinary.com/v1_1/dv4sidtxo/image/upload"
+    private val uploadPreset = "markethub"
 
     private val _products = mutableStateListOf<Product>()
     val products: List<Product> = _products

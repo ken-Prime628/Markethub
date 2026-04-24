@@ -9,9 +9,11 @@ import androidx.navigation.NavController
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 import com.kennedy.markethub.models.User
+import com.kennedy.markethub.navigation.ROUTE_ADD_PRODUCT
 import com.kennedy.markethub.navigation.ROUTE_Home
 import com.kennedy.markethub.navigation.ROUTE_Intent
 import com.kennedy.markethub.navigation.ROUTE_Register
+import com.kennedy.markethub.navigation.ROUTE_VIEW_PRODUCTS
 
 class AuthViewModel(var navController: NavController, var context: Context){
     private val mAuth: FirebaseAuth = FirebaseAuth.getInstance()
@@ -83,12 +85,12 @@ class AuthViewModel(var navController: NavController, var context: Context){
                         Toast.makeText(context, "Success", Toast.LENGTH_SHORT).show()
 
                         if (role == "admin") {
-                            navController.navigate(ROUTE_Intent)   // <-- change to your actual route
+                            navController.navigate(ROUTE_ADD_PRODUCT)   // <-- change to your actual route
                         }
 
 
                         else {
-                            navController.navigate(ROUTE_Home)
+                            navController.navigate(ROUTE_VIEW_PRODUCTS)
                         }
 
                     }.addOnFailureListener {

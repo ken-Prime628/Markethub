@@ -158,7 +158,9 @@ fun HomeScreen(navController: NavController){
                 )
 
                 Button(
-                    onClick = {},
+                    onClick = {
+
+                    },
                     colors = ButtonDefaults.buttonColors(Borange),
                     shape = RoundedCornerShape(10.dp),
 

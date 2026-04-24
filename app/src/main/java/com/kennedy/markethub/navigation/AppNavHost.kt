@@ -19,7 +19,7 @@ import com.kennedy.markethub.ui.screens.products.AddProductScreen
 import com.kennedy.markethub.ui.screens.products.UpdateProductScreen
 import com.kennedy.markethub.ui.screens.products.ViewProductScreen
 import com.kennedy.markethub.ui.screens.scaffold.ScaffoldScreen
-import com.kennedy.markethub.ui.screens.service.ServiceScreen
+
 import com.kennedy.markethub.ui.screens.splash.SplashScreen
 
 
@@ -88,4 +88,9 @@ fun AppNavHost(
 
 
     }
+}
+
+@Composable
+fun ServiceScreen(x0: NavHostController) {
+    TODO("Not yet implemented")
 }
